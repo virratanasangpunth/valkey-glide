@@ -1,0 +1,11 @@
+[package]
+name = "glide-deadlock-repro"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+glide-core = { path = "../glide-core" }
+redis = { path = "../glide-core/redis-rs/redis", features = ["aio", "tokio-comp", "tokio-rustls-comp"] }
+rustls = { version = "0.23", features = ["aws-lc-rs"] }
+clap = { version = "4", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
